@@ -4,14 +4,88 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Mohave", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1,
+h2 {
+  font-family: "Zen Antique", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+button,
+img {
+  user-select: none;
+}
+.header{
+  position: absolute;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.233);
+  backdrop-filter:blur(5px);
+  --webkit-backdrop-fiter:blur(5px);
+}
+.header nav{
+  display: none;
+}
+.header nav.open{
+  display: block;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header nav ul{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  background-color: #111827;
+  backdrop-filter:blur(10px);
+  --webkit-backdrop-filter:blur(10px);
+  width:calc(100vw - 50px);
+  position:absolute;
+  left:50%;
+  top:100px;
+  transform:translateX(-50%);
+  z-index:999;
+}
+.header nav ul li{
+  margin:10px 0;
+} 
+.menu{
+  display:block;
+}
+@media (min-width:768px){
+  .menu{
+    display: none;
+  }
+  .header nav{
+    display: block;
+  }
+  .header nav ul{
+    flex-direction:row;
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    --webkit-backdrop-filter:blur(0);
+    position: relative;
+    top:0;
+    right:0;
+    width:auto;
+  }
+  .header nav ul li{
+    margin: 0 10px;
+  }
+  .home{
+    background:url("../public/assets/home/background-home-mobile.jpg") no-repeat center/cover ;
+    height:calc(100vh - 1px);
+  }
+  .home .overlay{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:calc(100vh - 1px)
+  }
 }
