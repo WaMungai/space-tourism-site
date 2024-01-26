@@ -1,13 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../shared/logo.svg";
-import { FiMenu } from "react-icons/fi"
+import { FiMenu } from "react-icons/fi";
 
 function Header() {
-  const handleClick = () =>{
-    const navbar = document.getElementById("navbar")
-    navbar.classList.toggle("open")
-  }
+  const handleClick = () => {
+    const navbar = document.getElementById("navbar");
+    navbar.classList.toggle("open");
+  };
   return (
     <>
       <header className="header px-5 flex items-center justify-between">
@@ -20,34 +20,50 @@ function Header() {
             <li className="mx-2 py-5 text-gray-400 font-semibold">
               <NavLink
                 to="/"
-                exact
-                activeClassName="text-white border-b-4 border-white pb-7"
-              />
-              <span>00</span> Home
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white border-b-4 border-white pb-7"
+                    : "text-gray-400 font-semibold"
+                }
+              >
+                <span>00</span> Home
+              </NavLink>
             </li>
             <li className="mx-2 py-5 text-gray-400 font-semibold">
               <NavLink
                 to="/destination"
-                exact
-                activeClassName="text-white border-b-4 border-white pb-7"
-              />
-              <span>01</span> Destination
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white border-b-4 border-white pb-7"
+                    : "text-gray-400 font-semibold"
+                }
+              >
+                <span>01</span> Destination
+              </NavLink>
             </li>
             <li className="mx-2 py-5 text-gray-400 font-semibold">
-              <NavLink
+            <NavLink
                 to="/crew"
-                exact
-                activeClassName="text-white border-b-4 border-white pb-7"
-              />
-              <span>02</span> Crew
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white border-b-4 border-white pb-7"
+                    : "text-gray-400 font-semibold"
+                }
+              >
+                <span>02</span> Crew
+              </NavLink>
             </li>
             <li className="mx-2 py-5 text-gray-400 font-semibold">
-              <NavLink
+            <NavLink
                 to="/technology"
-                exact
-                activeClassName="text-white border-b-4 border-white pb-7"
-              />
-              <span>03</span> Technology
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white border-b-4 border-white pb-7"
+                    : "text-gray-400 font-semibold"
+                }
+              >
+                <span>03</span> Technology
+              </NavLink>
             </li>
           </ul>
         </nav>
