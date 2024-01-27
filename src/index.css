@@ -105,7 +105,8 @@ p {
 }
 
 .home {
-  background: url  ("../public/assets/home/background-home-mobile.jpg") no-repeat center/cover;
+  background: url("../public/assets/home/background-home-mobile.jpg")
+    no-repeat center/cover;
   height: calc(100vh - 1px);
 }
 
@@ -175,6 +176,21 @@ p {
     .home .overlay {
       max-width: 1200px;
       margin: auto;
+    }
+
+    .destinations {
+      background: url("../public/assets/destination/background-destination-desktop.jpg")
+        no-repeat center/cover;
+    }
+
+    .crew {
+      background: url("../public/assets/crew/background-crew-desktop.jpg")
+        no-repeat center/cover;
+    }
+
+    .technology {
+      background: url("../public/assets/technology/background-technology-desktop.jpg")
+        no-repeat center/cover;
     }
   }
 }
